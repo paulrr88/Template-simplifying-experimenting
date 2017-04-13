@@ -1,0 +1,423 @@
+/* Hashtags
+  #test - any test stuff that needs removing later
+  #weird - any weird stuff I don't understand but don't have time to look up/doesn't matter
+*/
+
+@media screen and (max-width: 1100px) { /*Desktop small*/
+
+  header { /*reduces height so less margin between header area and nav*/
+    height: 300px;
+  }
+
+  #content p {
+    width: 90%;               /* reduces extent of margins on paragraph text for smaller resolutions */
+  }
+  #content ul {
+    width: 90%;               /* matches p */
+  }
+
+  #header-left { /*scales logo down*/
+    width: 20%;
+    height: 160px;
+  }
+    #header-logo {
+      background: url(../images/logo.png) no-repeat center/160px;
+      width: 160px;
+      height: 160px;
+    }
+  #header-right { /*closer to logo in light of reduced width*/
+    position: absolute;
+      left: 25%;
+    width: 70%;
+  }
+    #header-tagline {
+      width: 66%;
+    }
+    #header-tagline h1 {
+      font-size: 2.5rem;
+    }
+    #header-title {
+      height: 45px;
+      width: 66%;
+    }
+    #header-title h1 {
+      font-size: 4.5rem;
+    }
+    #lottery { /*scaled down, takes less room as well*/
+      background: url(../images/lottery.png) no-repeat 0 0/140px;
+      height: 140px;
+      width: 34%;
+    }
+
+  ul.body {
+    padding-left: 0.25em;          /* reduces padding as it causes ridiculous misalign */
+  }
+  ul.lesspadding {
+    padding-left: 0.5em;
+  }
+}
+
+@media screen and (max-width: 750px) { /*Tablet*/
+
+  body {
+    font-size: 1.4rem;
+  }
+
+  /* CSS for table mobile fix JavaScript, from: http://sitesforprofit.com/responsive-tables-in-wordpress */
+  table {width:100%;}
+  thead {display: none;}
+  /*tr:nth-of-type(2n) {background-color: inherit;} removed as it seems to make background disappear on final cell*/
+  tr td:first-child {background: #ffa123; font-weight:bold;font-size:1.3em;} /*change this to control the properties of the newly styled table cell that's added when the resize happens*/
+  tbody td {display: block;  text-align:center;}
+  tbody td:before {
+    content: attr(data-th);
+    display: block;
+    text-align:center;
+  }
+
+  #content {
+    margin-top: 150px; /*allows navigation to overlay content box, if it was all margin it would have a clear break behind the navigation which looks bad for this design*/
+    padding-top: 6em;
+  }
+
+  #content-objectivebox-image { /*scales image up massively and brings it back within viewport; only way to compensate for the aspect ratio downsizing it at smaller resolutions*/
+    margin: 0 0 0 -48%;
+    width: 200%;
+  }
+
+  #header-left { /*scales logo down*/
+    height: 160px;
+    margin-top: 40px;
+    position: absolute;
+      top: 70px;
+      left: 9%;
+    width: 40%;
+  }
+    #header-logo {
+      background: url(../images/logo.png) no-repeat center/130px;
+      width: 130px;
+      height: 130px;
+    }
+  #header-right { /*closer to logo in light of reduced width*/
+    position: absolute;
+      top: 50px;
+      left: 12%;
+    width: 75%;
+  }
+    #header-tagline {
+      width: 100%;
+    }
+    #header-tagline h1 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    #header-title {
+      height: 45px;
+      margin-top: 90px;
+      width: 100%;
+    }
+    #header-title h1 {
+      font-size: 4.5rem;
+      text-align: center;
+    }
+    #lottery { /*floating removed so can just have centred, use position: absolute to push it above the header text*/
+      background: url(../images/lottery.png) no-repeat 0 0/110px;
+      clear: both;
+      float: none;
+      height: 90px;
+      margin: 0 auto;
+      position: absolute;
+        top: 0;
+        left: 40%;
+      width: 34%;
+    }
+    #tagline-box {/*increase height to prevent text mushing into area below*/
+      height: 70px;
+    }
+      #tagline-phone { /*increase width and centre everything so can align email below it*/
+        width: 100%;
+        float: none;
+      }
+        #tagline-phone p {
+          float: none;
+          font-size: 2.1rem;
+          text-align: center;
+        }
+      #tagline-email {
+        width: 100%;
+        float: none;
+      }
+        #tagline-email p {
+          float: none;
+          font-size: 1.8rem;
+          text-align: center;
+        }
+    #tagline-address {
+      height: 70px;
+      text-align: center;
+    }
+    #tagline-charity {
+      text-align: center;
+    }
+
+  #nav ul {
+    margin-top: 20px;
+  }
+    /*#navbuttons-aligner {
+      width: 400px;
+    }not needed see style.css*/
+    #home {                                                   /* box for home text in navigation box */
+      background: #ffa123 no-repeat 0 0;
+      /*height: 43px;*/
+      /*padding-top: 15px;*/
+      position: absolute;
+        left: 0;
+      width: 50%; /*Form a left column, along with left: 0;, right: 0; below forms the right column*/
+      z-index: 0;
+    }
+    #home p {
+      position: static;
+    }
+    #events {
+      background: #0082ba no-repeat 0 0;
+      position: absolute;
+        right: 0;
+      width: 50%;
+      z-index: 0;
+    }
+    #events p {
+      position: static;
+    }
+    #diary {
+      background: #ffdb11 no-repeat 0 0;
+      position: absolute;
+        left: 0;
+        top: 58px; /*Have to start moving stuff down from the top row*/
+      width: 50%;
+      z-index: 0;
+    }
+    #diary p {
+      position: static;
+    }
+    #news {
+      background: #ffa123 no-repeat 0 0;
+      position: absolute;
+        right: 0;
+        top: 58px;
+      width: 50%;
+      z-index: 0;
+    }
+    #news p {
+      position: static;
+    }
+    #videos {
+      background: #ffa123 no-repeat 0 0;
+      position: absolute;
+        left: 0;
+        top: 116px;
+      width: 50%;
+      z-index: 0;
+    }
+    #videos p {
+      position: static;
+    }
+    #admin {
+      background: #0082ba no-repeat 0 0;
+      position: absolute;
+        right: 0;
+        top: 116px;
+      width: 50%;
+      z-index: 0;
+    }
+    #admin p {
+      position: static;
+    }
+    #findus {
+      background: #0082ba no-repeat 0 0;
+      position: absolute;
+        left: 0;
+        top: 174px;
+      width: 50%;
+      z-index: 0;
+    }
+    #findus p {
+      position: static;
+    }
+  #top { /*centres it on tablet*/
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #top ul li {
+    font-size: 1.5rem;                                    /* fixes top logos etc so they don't interfere with design on lower resolutions; forces them to align centre-ish and out of the way of top graphics */
+    display: inline;
+  }
+  #top img {
+    width: 70px;
+  }
+
+  img.content-box-img-fullwidth { /*stops images from becoming HUGE*/
+    margin: 0 0 0 24%;
+    padding: 0;
+    width: 50%;
+  }
+  img.fluid {      /*Removes padding so can change image layout based on container which is safer with breakpoints, lets me alter an image's layout depending on circumstances, not global*/
+    padding: 0;
+  }
+  .background-orange-light-resize { /*disappears background colour*/
+    background: none;
+  }
+  .content-box-img-fullwidth-25 { /*gets rid of line of images at bottom of home page*/
+    visibility: hidden;
+  }
+  .img-box-tiny { /*makes contained image less tiny!*/
+    margin: 0 auto;
+    padding: 0 12% 0 18%; /*for some reason this works, don't ask me why #weird doesn't want to align properly without this*/
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 500px) { /*Mobile phones*/
+
+  body {
+    font-size: 1.4rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2.2rem;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+
+  header {
+    height: 173px;                              /* Allows taglines to be snug under #header-title */
+  }
+
+  table {
+    font-size: 1.4rem;
+  }
+
+  #content {
+    margin-top: 20px;
+    padding-top: 15em; /* moves content out from underneath of navigation */
+  }
+
+  #footer {
+    font-size: 1.5rem;
+  }
+  #footer ul li {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  #funding img { /*targets funding section images that are alone*/
+    margin: 0 0 0 30%;
+    width: 40%;
+  }
+  #funding p img { /*targets the images when they're two in a line as they're always in <p> tags*/
+    margin: 0 2% 0 2%;
+    width: 40%; /*to compensate for 10% margin on first image below - 45+45=90 and then 10% margin*/
+  }
+
+  #header-left { /*scales logo down and pushes it to the top of the viewport*/
+    height: 100px;
+    margin-top: 0;
+    position: static;
+    width: 100%;
+  }
+    #header-logo {
+      background: url(../images/logo.png) no-repeat center/100px;
+      margin: 0 auto;      /*centres logo within 100% width header-left container*/
+      width: 100px;
+      height: 100px;
+    }
+  #header-right { /*changes to static so it wraps under logo*/
+    position: static;
+    width: 100%;
+  }
+    #header-tagline { /*killing floats to prevent alignment issues */
+      float: none;
+    }
+    #header-title {
+      float: none;
+      margin-top: 0;
+    }
+    #header-title h1 {
+      font-size: 4rem; /*accounts for Safari being even thinner than I was expecting and distorting the header text*/
+    }
+    #lottery { /*removed to make more vertical space*/
+      visibility: hidden;
+      height: 0;
+      width: 0;
+    }
+    #tagline-box {/*increase height to prevent text mushing into area below*/
+      height: 60px;
+    }
+    #tagline-address {
+      height: 40px;
+    }
+
+  #nav {
+    padding: 0;
+    margin-top: 70px;     /* clears the header area */
+    width: 100%;          /* helps with centring */
+  }
+
+
+
+    #tagline-phone p {
+      font-size: 2rem;
+    }
+    #tagline-email p {
+      font-size: 1.5rem;
+    }
+    #tagline-address p {
+      font-size: 1.2rem;
+    }
+    #tagline-charity p {
+      font-size: 1.5rem;
+    }
+
+    #navbuttons {
+      margin-bottom: 40px;
+    }
+
+  #tableBig {                                                  /* tables with more columns, needs smaller font */
+    font-size: 1.2rem;
+  }
+
+  #top {
+    visibility: hidden;
+    height: 0;
+  }
+
+  .header-blue {
+    text-shadow: 1px 1px 0 #000;
+  }
+  .header-orange {
+    text-shadow: 0px 0px 0 #000;
+  }
+  .header-purple {
+    text-shadow: 0px 0px 0 #000;
+  }
+  .header-purple-sub {
+    text-shadow: 0px 0px 0 #000;
+  }
+
+  .left {
+    float: none;                                            /* just because floating doesn't work on mobile,
+                                                            same below */
+  }
+
+  .right {
+    float: none;
+  }
+}
