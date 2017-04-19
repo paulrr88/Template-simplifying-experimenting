@@ -11,9 +11,11 @@ Basic element customisations - body, font faces, paragraph layout etc
 ------------------------- */
 
 a {
-  color: #0082ba; }
+  color: #0082ba;
+}
 a:hover {
-  color: #0FA0CE; }
+  color: #0FA0CE;
+}
 
 body {
   background: #50a6cd;
@@ -49,6 +51,14 @@ header {
 img {
   margin: 0;
   padding: 2rem;
+}
+
+main { /*main content area for body text etc*/
+
+}
+
+nav { /*main navigation areas PLURAL so not just the top navigation area*/
+
 }
 
 ol {
@@ -412,115 +422,6 @@ IDs and classes
       text-decoration: none;
       color: #fff;
     }
-      /*#navbuttons-aligner {                                   /* helps to centre absolutely positioned buttons below, when resized in breakpoints for smaller resolutions. Stops them from just sitting off-centre at in-between window sizes or resolutions! */
-        /*margin: 20px auto 0 auto;
-        position: relative;
-        width: 880px;
-      } commented out due to not being useful for desktop, as want navigation to right align*/
-
-
-
-      #home {                                                   /* box for home text in navigation box */
-        background: url(../images/nav-orange.png) no-repeat 0 0;
-        height: 43px;
-        padding-top: 15px;
-        position: absolute;
-          right: 504px;
-        width: 94px;
-        z-index: 150;
-      }
-      #home p {
-        position: absolute;
-        top: 10px;
-        left: 15px;
-      }
-      #events {
-        background: url(../images/nav-yellow.png) no-repeat 0 0;
-        height: 43px;
-        padding-top: 15px;
-        position: absolute;
-          right: 420px;
-        width: 94px;
-        z-index: 140;
-      }
-      #events p {
-        position: absolute;
-        top: 10px;
-        left: 15px;
-      }
-      #diary {
-        background: url(../images/nav-blue.png) no-repeat 0 0;
-        height: 43px;
-        padding-top: 15px;
-        position: absolute;
-          right: 336px;
-        width: 94px;
-        z-index: 130;
-      }
-      #diary p {
-        position: absolute;
-        top: 10px;
-        left: 15px;
-      }
-      #news {
-        background: url(../images/nav-yellow.png) no-repeat 0 0;
-        height: 43px;
-        padding-top: 15px;
-        position: absolute;
-          top: 0px;
-          right: 252px;
-        width: 94px;
-        z-index: 120;
-      }
-      #news p {
-        position: absolute;
-        top: 10px;
-        left: 15px;
-      }
-      #videos {
-        background: url(../images/nav-orange.png) no-repeat 0 0;
-        height: 43px;
-        padding-top: 15px;
-        position: absolute;
-          right: 168px;
-        width: 94px;
-        z-index: 110;
-      }
-      #videos p {
-        position: absolute;
-        top: 10px;
-        left: 15px;
-      }
-      #admin {
-        background: url(../images/nav-blue.png) no-repeat 0 0;
-        height: 43px;
-        padding-top: 15px;
-        position: absolute;
-          top: 0px;
-          right: 84px;
-        width: 94px;
-        z-index: 100;
-      }
-      #admin p {
-        position: absolute;
-        top: 10px;
-        left: 15px;
-      }
-      #findus {
-        background: url(../images/nav-orange.png) no-repeat 0 0;
-        height: 43px;
-        padding-top: 15px;
-        position: absolute;
-          top: 0px;
-          right: 0px;
-        width: 94px;
-        z-index: 90;
-      }
-      #findus p {
-        position: absolute;
-        top: 10px;
-        left: 15px;
-      }
 
 /* Nav IDs end */
 
@@ -546,6 +447,7 @@ IDs and classes
 }
 
 #top {                                                    /* navigation links at top of each page */
+  background: purple;
   color: #fff;
   font-size: 1.75rem;
   text-align: right;
@@ -561,8 +463,7 @@ IDs and classes
   color: #fff;
 }
 #top ul {
-  margin: 20px 0 0 0;                                       /* removes margin so aligns with bottom of box better
-                                                          - keeps margin on top to space from other text*/
+  margin: 0 2em 0 0;        /*keeps space on right so it's not just against edge of viewport*/
 }
 
 #top ul li {
@@ -572,7 +473,6 @@ IDs and classes
   text-align:left;
   *display:inline;/* IE7 */
   *zoom:1;
-
 }
 #top ul li:last-child {
   margin-right: 0;                                        /* prevents margin from throwing off last list item */

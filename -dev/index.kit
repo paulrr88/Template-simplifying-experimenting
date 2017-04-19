@@ -1,0 +1,86 @@
+<!--$page-title Home-->
+<!--$description We meet at Dove Lodge, 49 Beach road, Littlehampton on alternate Sundays from 2pm to 5pm. Our objective is to advance the education and welfare of adults with learning difficulties, and to provide support for their families and carers, in order to provide a better standard of life for such people.-->
+<!--$dir nil-->
+<!--$tablescript <script>
+  // DELETE THIS IF NOT NEEDED ON THIS PAGE
+  // fix for mobile table layout from http://sitesforprofit.com/responsive-tables-in-wordpress
+
+  var headertext = [];
+  var headers = document.querySelectorAll("thead");
+  var tablebody = document.querySelectorAll("tbody");
+
+  for (var i = 0; i < headers.length; i++) {
+    headertext[i]=[];
+    for (var j = 0, headrow; headrow = headers[i].rows[0].cells[j]; j++) {
+      var current = headrow;
+      headertext[i].push(current.textContent);
+      }
+  }
+
+  for (var h = 0, tbody; tbody = tablebody[h]; h++) {
+    for (var i = 0, row; row = tbody.rows[i]; i++) {
+      for (var j = 0, col; col = row.cells[j]; j++) {
+        col.setAttribute("data-th", headertext[h][j]);
+      }
+    }
+  }
+</script>-->
+
+<!--@import opening-->
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!--Container for ALL content, everything inside this--><main class="container" role="main" style="background: blue; color: white;">
+    <p>Container begins</p>
+
+    <div class="">
+      <article role="article" style="background: orange;">
+        <h1 role="heading">Header for article (page content)</h1>
+
+        <section style="background: yellow; color: black;">
+          <h1>Header for section within article</h1>
+
+          <p>Content for section</p>
+
+          <ul role="list">
+            <li role="listitem">Hey there. <code>This is a code snippet</code>
+              <ul role="list">
+                <li role="listitem">Hey I'm embedded</li>
+              </ul>
+            </li>
+          </ul>
+
+          <table summary="">
+            <thead>
+              <tr>
+                <th scope="col">Hey it's table time</td>
+                <th scope="col">I'm the second column header</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">I'm the first cell in the table body</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <div class="four columns" style="background: green">
+          <p>Hey</p>
+        </div>
+
+        <div class="three columns" style="background: green">
+          <p>Hey</p>
+        </div>
+
+        <div class="four columns u-pull-right">
+          <section style="background: purple;">
+            <p>This area doesn't want to be part of the main article area! Behold u-pull-right.</p>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!--@import footer-->
