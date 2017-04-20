@@ -32,95 +32,142 @@
   <!-- Google fonts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet"><!--Bench Nine Google Font for headers-->
+  <!--<link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet"><!--Bench Nine Google Font for headers-->
 </head>
 
 <body>
 
+  <header id="banner" role="banner"><!--Start of header area containing website title, graphics and navigation etc-->
+    <nav id="top" role="navigation"><!--Start of top information area-->
+      <ul>
+        <li><a href="sitemap/">Sitemap</a></li>
+        <li><a href="folder/">Another link</a></li>
+      </ul>
+    </nav><!--End of top information area-->
 
+    <h1 class="centre">Website Title</h1>
 
-<header role="banner">
-  <nav class="twelve columns" id="top"><!--Start of top information area-->
-    <ul>
-      <li><a href="sitemap/">Sitemap</a></li>
-      <li><a href="folder/">Another link</a></li>
-    </ul>
-  </nav><!--End of top information area-->
+    <h2 class="centre">Website Byline</h2>
 
-  <h1 style="background: orange; margin: 0; padding: 0;">Website Title</h1>
-
-  <h2 style="background: green; margin: 0; padding: 0;">Website Byline</h2>
-
-  <nav id="nav-main" role="navigation" style="background: cyan;">
-    <ul>
-      <li>Link 1</li>
-      <li>Link 2</li>
-      <li>Link 3</li>
-      <li>Link 4</li>
-      <li>Link 5</li>
-      <li>Link 6</li>
-      <li>Link 7</li>
-      <li>Link 8</li>
-      <li>Link 9</li>
-      <li>Link 10</li>
-    </ul>
-  </nav>
-</header>
+    <nav id="nav-main" role="navigation"><!--Main navigation start-->
+      <ul>
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+        <li>Link 4</li>
+        <li>Link 5</li>
+        <li>Link 6</li>
+        <li>Link 7</li>
+        <li>Link 8</li>
+        <li>Link 9</li>
+        <li>Link 10</li>
+      </ul>
+    </nav><!--Main navigation ends-->
+  </header><!--Header area ends-->
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <!--Container for ALL content, everything inside this--><main class="container" role="main" style="background: blue; color: white;">
-    <p>Container begins</p>
+    <main class="container" role="main" style="background: blue; color: white;"><!--Container for ALL content, everything inside this-->
+      <p>Container begins</p>
 
-    <div class="">
-      <article role="article" style="background: orange;">
-        <h1 role="heading">Header for article (page content)</h1>
+      <div class="">
+        <article role="article" style="background: orange;">
+          <h1 role="heading">Header for article (page content)</h1>
 
-        <section style="background: yellow; color: black;">
-          <h1>Header for section within article</h1>
+          <section style="background: yellow; color: black;">
+            <h2>Header for section within article</h2>
 
-          <p>Content for section</p>
+            <p>Content for section</p>
 
-          <ul role="list">
-            <li role="listitem">Hey there. <code>This is a code snippet</code>
-              <ul role="list">
-                <li role="listitem">Hey I'm embedded</li>
-              </ul>
-            </li>
-          </ul>
+            <h3>Header 3</h3>
 
-          <table summary="">
-            <thead>
-              <tr>
-                <th scope="col">Hey it's table time</td>
-                <th scope="col">I'm the second column header</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="row">I'm the first cell in the table body</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+            <h4>Header 4</h4>
 
-        <div class="four columns" style="background: green">
-          <p>Hey</p>
-        </div>
+            <h5>Header 5</h5>
 
-        <div class="three columns" style="background: green">
-          <p>Hey</p>
-        </div>
+            <h6>Header 6</h6>
 
-        <div class="four columns u-pull-right">
-          <section style="background: purple;">
-            <p>This area doesn't want to be part of the main article area! Behold u-pull-right.</p>
+            <ul role="list">
+              <li role="listitem">Hey there. <code>This is a code snippet</code>
+                <ul role="list">
+                  <li role="listitem">Hey I'm embedded</li>
+                </ul>
+              </li>
+            </ul>
+
+            <table summary="">
+              <thead>
+                <tr>
+                  <th scope="col">Hey it's table time</td>
+                  <th scope="col">I'm the second column header</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>I'm the first cell in the table body gosh I have a lot of text</td>
+                  <td>I'm the second</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <figure class="width-50">
+              <img
+                alt="Photo of a bunny"
+                class="fluid-100"
+                role="img"
+                src="https://s-media-cache-ak0.pinimg.com/736x/0a/8b/91/0a8b91f0bfbbcbc65fb7d43cd9ff4c78.jpg"
+                title="Bunny Rabbit by Photographer"
+              >
+              <figcaption>Hey this is a caption for the above image</figcaption>
+            </figure>
+
+            <figure class="fluid-images-3 margin-4" style="background: magenta;">
+              <img
+                alt="Photo of a bunny"
+                class=""
+                role="img"
+                src="https://s-media-cache-ak0.pinimg.com/736x/0a/8b/91/0a8b91f0bfbbcbc65fb7d43cd9ff4c78.jpg"
+                title="Bunny Rabbit by Photographer"
+              >
+              <img
+                alt="Photo of a bunny"
+                class=""
+                role="img"
+                src="https://s-media-cache-ak0.pinimg.com/736x/0a/8b/91/0a8b91f0bfbbcbc65fb7d43cd9ff4c78.jpg"
+                title="Bunny Rabbit by Photographer"
+              >
+              <img
+                alt="Photo of a bunny"
+                class=""
+                role="img"
+                src="https://s-media-cache-ak0.pinimg.com/736x/0a/8b/91/0a8b91f0bfbbcbc65fb7d43cd9ff4c78.jpg"
+                title="Bunny Rabbit by Photographer"
+              >
+              <figcaption class="centre padding-3-left padding-3-right">Hey this is a caption for the above images plural. To add another image, just change it to fluid-xx depending on how many images (divided up into 100 or whatever width the figure container is). Obviously adjustments need to be made if padding and margins are needed</figcaption>
+            </figure>
           </section>
-        </div>
-      </article>
-    </div>
-  </main>
+
+          <div class="four columns" style="background: green">
+            <p>Four columns</p>
+          </div>
+
+          <div class="three columns" style="background: green">
+            <p>Three columns</p>
+
+
+          </div>
+
+          <div class="four columns u-pull-right">
+            <section style="background: purple;">
+              <p>This area doesn't want to be part of the main article area! Behold u-pull-right.</p>
+            </section>
+          </div>
+        </article>
+      </div>
+
+      <p class="clear">End of container</p>
+    </main>
 
     <footer>
     <ul>
@@ -149,7 +196,7 @@
     <br />
   </footer>
 
-<script>
+  <script>
   // DELETE THIS IF NOT NEEDED ON THIS PAGE
   // fix for mobile table layout from http://sitesforprofit.com/responsive-tables-in-wordpress
 

@@ -5,10 +5,6 @@
 
 @media screen and (max-width: 1100px) { /*Desktop small*/
 
-  header { /*reduces height so less margin between header area and nav*/
-    height: 300px;
-  }
-
   #content p {
     width: 90%;               /* reduces extent of margins on paragraph text for smaller resolutions */
   }
@@ -160,7 +156,7 @@
       text-align: center;
     }
 
-  #nav ul {
+  /*#nav ul {
     margin-top: 20px;
   }
     /*#navbuttons-aligner {
@@ -365,11 +361,11 @@
       height: 40px;
     }
 
-  #nav {
+  /*#nav {
     padding: 0;
     margin-top: 70px;     /* clears the header area */
-    width: 100%;          /* helps with centring */
-  }
+  /*  width: 100%;          /* helps with centring */
+  /*}*/
 
 
 
@@ -386,9 +382,9 @@
       font-size: 1.5rem;
     }
 
-    #navbuttons {
+    /*#navbuttons {
       margin-bottom: 40px;
-    }
+    }*/
 
   #tableBig {                                                  /* tables with more columns, needs smaller font */
     font-size: 1.2rem;
