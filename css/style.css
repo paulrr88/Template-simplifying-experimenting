@@ -143,249 +143,6 @@ IDs and classes
   width: 90%;
 }
 
-#event { /*targeting the event box that events stuff goes into from Perch*/
-}
-/*#event h1 {
-  margin: 0;
-  padding: 2% 5% 2% 5%;
-}*/
-#event h2 {
-  margin: 0;
-  padding: 2% 5% 2% 5%;
-}
-  #event h2.event-title {
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    width: 75%;
-  }
-#event h3 {
-  margin: 0;
-  padding: 2% 5% 2% 5%;
-}
-  #event h3.event-date {
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    width: 75%;
-  }
-#event h4 {
-  font-size: 2.9rem;
-  margin: 0;
-  padding: 2% 5% 2% 5%;
-  text-align: center;
-}
-#event h5 {
-  font-size: 2.7rem;
-  margin: 0;
-  padding: 2% 5% 2% 5%;
-  text-align: center;
-}
-#event h6 {
-  font-size: 2.5rem;
-  margin: 0;
-  padding: 2% 5% 2% 5%;
-  text-align: center;
-}
-#event img { /*targets images that are alone*/
-  margin: 0 0 0 25%;
-  padding: 0;
-  width: 50%;
-}
-#event p img { /*targets the images when they're two in a line as they're always in <p> tags*/
-  margin: 0;
-  padding: 0;
-  width: 45%; /*to compensate for 10% margin on first image below - 45+45=90 and then 10% margin*/
-}
-#event p img:first-child {
-  margin-right: 10%; /*so there's some space between two images in a line*/
-}
-
-
-#funding { /*targeting the funding area at bottom of home page; having to copy news and events CSS almost exactly because this stylesheet is inefficient! Only thing that really changes is the img stuff*/
-}
-/*#funding h1 {
-  margin: 0;
-  padding: 2% 5% 2% 5%;
-}*/
-#funding h2 {
-  margin: 0;
-  padding: 2% 5% 2% 5%;
-}
-  #funding h2.event-title {
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    width: 75%;
-  }
-#funding h3 {
-  margin: 0;
-  padding: 2% 5% 2% 5%;
-}
-  #funding h3.event-date {
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    width: 75%;
-  }
-#funding h4 {
-  font-size: 2.9rem;
-  margin: 0;
-  padding: 2% 5% 2% 5%;
-  text-align: center;
-}
-#funding h5 {
-  font-size: 2.7rem;
-  margin: 0;
-  padding: 2% 5% 2% 5%;
-  text-align: center;
-}
-#funding h6 {
-  font-size: 2.5rem;
-  margin: 0;
-  padding: 2% 5% 2% 5%;
-  text-align: center;
-}
-#funding img { /*targets images that are alone*/
-  margin: 0 0 0 40%;
-  padding: 0;
-  width: 20%;
-}
-#funding p img { /*targets the images when they're two in a line as they're always in <p> tags*/
-  margin: 0 16% 0 16%;
-  padding: 0;
-  width: 20%; /*to compensate for 10% margin on first image below - 45+45=90 and then 10% margin*/
-}
-#funding p img:first-child {
-  margin-right: 10%; /*so there's some space between two images in a line*/
-}
-
-
-
-/* HEADER LOGO/TITLE AREA - lots of fancy layout stuff needed for this! */
-
-#header-left { /*contains logo in a left column*/
-  width: 25%;
-  height: 233px;
-  position: absolute;
-    top: 70px;
-    left: 0;
-}
-  #header-logo { /*logo itself, sits in header-logo-box and ignores its width % attribute as it has a fixed pixel width*/
-    background: url(../images/logo.png) no-repeat center/233px;
-    width: 233px;
-    height: 233px;
-  }
-#header-right { /*right side container in header, right of logo*/
-  font-family: "Arial Narrow", sans-serif;
-  position: absolute;
-    top: 90px;
-    left: 30%;
-  width: 70%;
-}
-  #header-tagline { /*header tagline learning difficulty*/
-    float: left;
-    width: 76%;
-  }
-  /*#header-tagline h1 {
-    color: #22147c;
-    font-family: "Arial Narrow", sans-serif;
-    font-size: 3.2rem;
-    margin: 0;
-    padding: 0px 0 0 0;
-    text-align: left;
-  }*/
-  #header-title {
-    color: #ffd300;
-    float: left;
-    height: 75px;
-    text-shadow:                                       /* adds "stroke" to text, really a fudged shadow, the best CSS 3 can do apparently */
-    5px 5px 0 #e57800;
-    width: 76%;
-  }
-  /*#header-title h1 {
-    font-size: 7.3rem;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-  }*/
-  #lottery { /*lottery logo to right of header title and tagline*/
-    background: url(../images/lottery.png) no-repeat 0 0/160px;
-    float: right;
-    height: 119px;              /*helps to pull up area below by not making it too big*/
-    width: 24%;
-  }
-    #nolottery {
-      visibility: none;
-    }
-  #tagline-box {/*contains phone and email taglines*/
-    width: 100%;
-    clear: both;                /*needed to avoid problems with float:right in header lottery logo*/
-  }
-    #tagline-email {
-      width: 50%;
-      float: right;
-    }
-      #tagline-email p {
-        color: #fff;
-        float: right;
-        font-size: 2.5rem;
-        margin: 0;
-        padding: 0;
-        text-shadow:                                       /* adds "stroke" to text, really a fudged shadow, the best CSS 3 can do apparently */
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-      }
-    #tagline-phone {
-      width: 50%;
-      float: left;
-    }
-      #tagline-phone p {
-        color: #fff;
-        float: left;                                      /* aligns phone text left underneath header text */
-        font-size: 2.8rem;
-        margin: 0;
-        padding: 0;
-        text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-      }
-
-  #tagline-address {
-    clear: both;                              /* needed to prevent lining up with floats on phone/email */
-    width: 100%;
-  }
-    #tagline-address p {
-      color: #fff;
-      font-size: 1.75rem;
-      padding: 0;
-      text-shadow:
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
-    }
-  #tagline-charity {/*charity no.*/
-    width: 100%;
-  }
-  #tagline-charity p {
-    color: #fff;
-    font-size: 1.75rem;
-    margin: 0;
-    padding: 0;
-    text-shadow:
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
-  }
-
-
-
 #footer {
   color: #fff;
   font-size: 1.75rem;
@@ -418,58 +175,21 @@ IDs and classes
 
 /* Navigation IDs */
 
-  #nav-main {
+#nav-main {
     background: cyan; /*#test*/
-  }
-  #nav-main ul {
+}
+#nav-main ul {
     padding: 0;
     margin: 0 auto;
     text-align: center;
     width: 50%;
-  }
-  #nav-main ul li {
+}
+#nav-main ul li {
     display: inline-block;
     *display: inline;                                       /* IE7 */
     *zoom: 1;
     padding-left: 1rem;
-  }
-
-  /*#nav {
-    color: #000;
-    font-size: 2rem;
-    font-weight: bold;
-    height: 113px;        /* aligns content below nav */
-  /*  margin-top: 40px;
-    text-align: center;
-    width: 100%;          /* helps with centring */
-  /*}
-
-    #nav .centre {
-      display: inline-block;                                  /* somehow causes nav to centre */
-  /*    *display: inline;                                       /* IE7 */
-  /*    *zoom: 1;
-      width: 95%;
-    }
-
-  /*  #navbuttons {                                             /* container for nav buttons */
-  /*    margin-top: 100px;
-      position: relative;
-      text-shadow:                                       /* adds "stroke" to text, really a fudged shadow, the best CSS 3 can do apparently */
-  /*      -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-    }
-    #navbuttons p {
-      margin: 0;
-      padding: 0;
-    }
-    #navbuttons a.nav:link, a.nav:visited {
-      text-decoration: none;
-      color: #fff;
-    }
-
-/* Nav IDs end */
+}
 
 #sitemap {
   font-size: 2.5rem;
@@ -529,26 +249,6 @@ div a.nostyle {
   text-decoration: none;
 }
 
-/*h1,h2,h3,h4.title {                                                /* title at top of all content pages
-  padding: 1em 0 1.5em 0;         /*#PROBLEM as it overrides headers elsewhere in document
-  text-align: center;
-}*/
-h2.mission {
-  margin: 0;
-  padding: 1em 0 0.5em 0;
-}
-h3.contents {
-  padding: 1.5em 0 0 0;
-}
-
-img.200 {
-  width: 200px;
-}
-img.content-box-img-fullwidth { /*image fits exactly within content box and fills it*/
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
 img.left {
   float: left;
 }
@@ -564,39 +264,11 @@ p.backtotop {
 p.centre {
   text-align: center;
 }
-p.content-box-p { /*for paragraphs in content boxes*/
-  font-size: 2rem;
-  padding: 30px 0 20px 0;
-}
-p.content-box-p-big { /*for emphasis paragraphs in content boxes*/
-  font-size: 2.2rem;
-  padding: 30px 0 20px 0;
-}
-p.content-box-p-objective { /*special adjustment just for the objectives box*/
-  font-size: 2rem;
-  padding: 30px 10px 20px 10px;
-}
-
-tbody.diary td { /*helps with diary layout, makes it less massive*/
-  padding: 0.2em;
-  margin: 0;
-  text-align: center;
-}
-
 
 ul.body {
   padding-left: 0.5em;
   margin: 0 auto;
   width: 70%;
-}
-ul.compact {
-  margin: 0 auto;
-  padding: 0.5em;
-  width: 70%;
-}
-ul.compact li {
-  padding: 0;
-  margin: 0;
 }
 ul.contents {
   list-style: none;
@@ -618,82 +290,18 @@ ul.nostyle {                                             /* removes styling from
 }
 
 
+/*Classes*/
+
+/*Background colours*/
+
 .background-blue {
   background: #50a6cd;
 }
-.background-blue-dark {
-  background: #0082ba;
-}
-.background-blue-light {
-  background: #50a6cc;
-}
-.background-blue-lighter {
-  background: #70d0ff;
-}
-.background-yellow {
-  background: #fae055;
-}
-.background-yellow-deep {
-  background: #ffd301;
-}
-.background-orange {
-  background: #ffa123;
-}
-.background-orange-mid {
-  background: #ffba58;
-}
-.background-orange-light {
-  background: #ffde82;
-}
-.background-orange-light-resize { /*basically a version that will disappear on lower breakpoints, used for home page image that goes 200% size*/
-  background: #ffde82;
-}
-.background-purple {
-  background: #d2c9fa;
-}
-.background-teal {
-  background: #52bda5;
-}
 
-.content-box-col-orange { /*for column content items - accompany with appropriate columns class from Skeleton*/
-  background: #ffde82;
-  border-bottom: 40px solid #ffb65a;
-  margin-bottom: 5%;
-}
-.content-box-col-yellow { /*for column content items - accompany with appropriate columns class from Skeleton*/
-  background: #fae055;
-  border-bottom: 40px solid #ffd300;
-  margin-bottom: 5%;
-}
-.content-box-img-fullwidth-25 { /*contains .content-box-img-fullwidth and lets it stack against 3 others horizontally*/
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 25%;
-}
-.content-box-wide { /*for wide content items - doesn't need to be accompanied by twelve columns class*/
-  border-bottom: 40px solid #ffb65a;
-  margin: 3% 0 3% 5%;
-  width: 90%;
-}
-.content-box-wide-yellow {
-  border-bottom: 40px solid #ffd300;
-  margin: 3% 0 3% 5%;
-  width: 90%;
-}
+/*End background colours*/
 
 .centre {
   text-align: center;
-}
-.centre-400 {                                             /* centres images with 400px width */
-  margin: 0 auto;
-  max-width: 100%;
-  width: 400px;
-}
-.centre-600 {                                             /* centres images with 600px width */
-  margin: 0 auto;
-  max-width: 100%;
-  width: 600px;
 }
 .clear {
   clear: both;
@@ -713,53 +321,6 @@ figure.fluid-images-3 img:first-child {
 }
 .fluid-half {
   max-width: 50%;
-}
-
-.header-blue { /*3D blue style headers*/
-  border-bottom: 8px solid;
-  color: #46a2c2;
-  text-shadow: 2px 0px 0 #0d6eac;
-  margin: 0 auto;
-  padding-bottom: 0;
-  width: 75%;
-}
-.header-50 { /*title with reduced width and padding etc, useful for content boxes and to prevent border from going too far*/
-  margin: 0 auto;
-  width: 50%;
-}
-.header-content-box { /*for inside content boxes*/
-  margin: 0 auto;
-  padding: 20px 0 0 0;
-  width: 50%;
-}
-.header-orange { /*3D blue style headers*/
-  border-bottom: 8px solid;
-  color: #fd8f1c;
-  text-shadow: 2px 0px 0 #b35e00;
-  margin: 0 auto;
-  padding-bottom: 0;
-  width: 75%;
-}
-.header-purple { /*3D purple style*/
-  border-bottom: 8px solid;
-  color: #795dd6;
-  margin: 0 auto;
-  padding-bottom: 0;
-  text-shadow: 2px 0px 0 #5a36cb;
-  width: 75%;
-}
-.header-purple-sub { /*for underneath other larger headers*/
-  color: #5a36cb;
-  margin: 0 auto;
-  padding: 0;
-  text-shadow: 2px 0px 0 #22007c;
-  width: 75%;
-}
-
-.img-box-tiny {
-  margin: 0 auto;
-  padding: 1%;
-  width: 25%;
 }
 
 .inline {
@@ -789,67 +350,6 @@ figure.fluid-images-3 img:first-child {
   margin: 0 auto;
 }
 
-.newsbox { /*styles for stuff entered via Perch custom news article template*/
-}
-  /*.newsbox h1 {
-    margin: 0;
-    padding: 2% 5% 2% 5%;
-    text-align: center;
-  }*/
-  .newsbox h2 {
-    margin: 0;
-    padding: 2% 5% 2% 5%;
-    text-align: center;
-  }
-    .newsbox h2.news-title {
-      margin: 0 auto;
-      padding: 0;
-      text-align: center;
-      width: 75%;
-    }
-  .newsbox h3 {
-    margin: 0;
-    padding: 2% 5% 2% 5%;
-    text-align: center;
-  }
-    .newsbox h3.news-date {
-      margin: 0 auto;
-      padding: 0;
-      text-align: center;
-      width: 75%;
-    }
-  .newsbox h4 {
-    font-size: 2.9rem;
-    margin: 0;
-    padding: 2% 5% 2% 5%;
-    text-align: left;
-  }
-  .newsbox h5 {
-    font-size: 2.7rem;
-    margin: 0;
-    padding: 2% 5% 2% 5%;
-    text-align: center;
-  }
-  .newsbox h6 {
-    font-size: 2.5rem;
-    margin: 0;
-    padding: 2% 5% 2% 5%;
-    text-align: center;
-  }
-  .newsbox img { /*targets images that are alone*/
-    margin: 0 0 0 25%;
-    padding: 0;
-    width: 50%;
-  }
-  .newsbox p img { /*targets the images when they're two in a line as they're always in <p> tags*/
-    margin: 0;
-    padding: 0;
-    width: 45%; /*to compensate for 10% margin on first image below - 45+45=90 and then 10% margin*/
-  }
-  .newsbox p img:first-child {
-    margin-right: 10%; /*so there's some space between two images in a line*/
-  }
-
 .nomargin {
   margin: 0;
 }
@@ -877,7 +377,8 @@ figure.fluid-images-3 img:first-child {
 .small {
   font-size: 1.5rem;
 }
-.spacer {                                                /* works with Skeleton to allow white space between vertically stacked divs */
+
+.spacer {  /* works with Skeleton to allow white space between vertically stacked divs */
   float: left;
   height: 3em;
   width: 100%;
