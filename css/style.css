@@ -118,13 +118,13 @@ IDs and classes
 }*/
 
 #banner {
-  background: orange; /*#test*/
+
 }
 #banner h1 {
-  background: salmon; /*#test*/
+
 }
 #banner h2 {
-  background: green; /*#test*/
+
 }
 
 #content {
@@ -176,7 +176,7 @@ IDs and classes
 /* Navigation IDs */
 
 #nav-main {
-    background: cyan; /*#test*/
+
 }
 #nav-main ul {
     padding: 0;
