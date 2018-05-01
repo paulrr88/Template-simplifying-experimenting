@@ -1,414 +1,114 @@
-/* N.B. Everything up here is >1100px max-width, see breaks.css for other breakpoints */
-
-/* Hashtags
-#test - any test stuff that needs removing later
-#weird - any weird stuff I don't understand but don't have time to look up/doesn't matter
+/*
+#delete any bits marked with #delete later when cleaning up
 */
 
+/* for example here would have like 
+a { text-decoration: none
+this or that etc; } 
 
-/* -------------------------
-Basic element customisations - body, font faces, paragraph layout etc
-------------------------- */
+KEEP THIS GLOBAL and also largely reset so no padding, margins etc. And just for mobile #delete */
+
+/* Element Selectors */
+
 
 a {
-  color: #0082ba;
+    color: #0082ba;
+    margin: 0;
+    padding: 0;
 }
+
 a:hover {
-  color: #0FA0CE;
+    color: #0fa0ce;
+}
+
+a:visited {
+    color: #0082ba;
 }
 
 body {
-  background: #50a6cd;
-  font-family: "Arial", sans-serif;
+    background: #50a6cd;
+    font: 1.5rem/2.5rem "Trebuchet MS", sans-serif;
+}
+
+code {
+    font: 1.5rem "American Typewriter", monospace;
+    margin: 0;
+    padding: 0;
 }
 
 figure {
-  margin: 0;
-  padding: 0;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  font-family: "BenchNine", sans-serif;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-}
-h1 {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-  font-size: 4rem;
+    font: bold 4.5rem "Impact", serif;
+    margin: 0;
+    padding: 0;
 }
 h2 {
-  font-size: 3rem;
+    font: bold 3.5rem;
+    margin: 0;
+    padding: 0;
 }
 h3 {
-  font-size: 2.5rem;
+    font: bold 3rem;
+    margin: 0;
+    padding: 0;
 }
 h4 {
-  font-size: 2rem;
+    font: bold 2.5rem;
+    margin: 0;
+    padding: 0;
 }
 h5 {
-  font-size: 1.7rem;
+    font: bold 2.2rem;
+    margin: 0;
+    padding: 0;
 }
 h6 {
-  font-size: 1.5rem;
+    font: bold 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-  /*height: 220px; doesn't seem to make a difference anymore*/
-
+    
 }
 
 img {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-main { /*main content area for body text etc*/
-
+main {
+    
 }
 
-nav { /*main navigation areas PLURAL so not just the top navigation area*/
-
+nav {
+    
 }
 
 ol {
-  margin: 1.5rem auto;
-  width: 60%;
-}
-
-ol li {
-  padding: 0.5rem 0;
+    
 }
 
 p {
-  margin: 0;
-  padding: 1.5rem;
+    
 }
 
 table {
-  font-size: 1.6rem;
+    
 }
 
 ul {
-  margin: 0;
-  padding: 0 0 0 2rem;
-}
-
-ul li {
-  margin: 0;
-  padding: 0.5rem 0;
-}
-
-/* -------------------------
-IDs and classes
-------------------------- */
-
-/*#aboutnav {
-  width: 90%;
-  margin: 0 auto;
-  border-bottom: 3px #105cbd solid;
-}
-#aboutnav h2 {
-  margin: 0;
-  padding: 0 0 0.5em 0;
-}*/
-
-#banner {
-
-}
-#banner h1 {
-
-}
-#banner h2 {
-
-}
-
-#content {
-  margin-top: 30px;
-}
-#content p {                                           /* better margins for text on desktop */
-  width: 70%;
-  margin: 0 auto;
-}
-#content-objectivebox { /*home page objective box*/
-  margin: 0 0 5% 5%;
-  width: 90%;
-}
-#content-objectivebox-image {
-  margin: 0 auto;
-  width: 90%;
-}
-
-#footer {
-  color: #fff;
-  font-size: 1.75rem;
-  text-align: center;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-}
-  #footer a:link {
-    color: #fff;
-  }
-  #footer a:visited {
-    color: #fff;
-  }
-
-  #footer ul {
-    margin-bottom: 0;
-  }
-  #footer ul li {
-    display: inline-block;                                  /* displays everything horizontal instead of vertical */
-    margin-right: 20px;
-    padding-right: 20px;
-  }
-  #footer ul li:last-child {
-    margin-right: 0;
-    padding-right: 0;
-  }
-
-/* Navigation IDs */
-
-#nav-main {
-
-}
-#nav-main ul {
-    padding: 0;
-    margin: 0 auto;
-    text-align: center;
-    width: 50%;
-}
-#nav-main ul li {
-    display: inline-block;
-    *display: inline;                                       /* IE7 */
-    *zoom: 1;
-    padding-left: 1rem;
-}
-
-#sitemap {
-  font-size: 2.5rem;
-  margin: 20px auto;
-  text-align: center;
-  width: 50%;
-}
-
-#table {                                                  /* table on contacts page etc */
-  margin: 0 auto;
-  table-layout: fixed;
-  width: 75%;
-}
-#table td {
-  word-wrap: break-word;
-}
-#tableBig {                                               /* tables with more columns */
-  margin: 0 auto;
-  table-layout: fixed;
-  width: 90%;
-}
-
-#top {                                                    /* navigation links at top of each page */
-  background: purple;
-  color: #fff;
-  font-size: 1.75rem;
-  text-align: right;
-  width: 100%;                                            /* helps with centring navigation */
-}
-#top a:hover {
-  color: #fff;
-}
-#top a:link {
-  color: #fff;
-}
-#top a:visited {
-  color: #fff;
-}
-#top ul {
-  margin: 0 2em 0 0;        /*keeps space on right so it's not just against edge of viewport*/
-}
-
-#top ul li {
-  display: inline-block;                                /* wraps with viewport size */
-  font-size: 1.5rem;
-  margin-right: 20px;                                   /* spacing for list items when horizontal */
-  text-align:left;
-  *display:inline;/* IE7 */
-  *zoom:1;
-}
-#top ul li:last-child {
-  margin-right: 0;                                        /* prevents margin from throwing off last list item */
-}
-
-div a.nostyle {
-  color: #000;
-  text-decoration: none;
-}
-
-img.left {
-  float: left;
-}
-img.right {
-  float: right;
-}
-
-p.backtotop {
-  font-weight: bolder;
-  padding: 2em 0 2em 0;
-  text-align: center;
-}
-p.centre {
-  text-align: center;
-}
-
-ul.body {
-  padding-left: 0.5em;
-  margin: 0 auto;
-  width: 70%;
-}
-ul.contents {
-  list-style: none;
-  margin: 20px auto;
-  padding: 0.5em;
-  text-align: center;
-  width: 70%;
-}
-ul.contents li {
-  padding: 0;
-}
-ul.lesspadding {
-  padding-left: 3em;
-  width: 70%;
-}
-ul.nostyle {                                             /* removes styling from lists as needed */
-  list-style: none;
-  margin-left: 1.5rem;
+    
 }
 
 
-/*Classes*/
+/* ID Selectors */
 
-/*Background colours*/
 
-.background-blue {
-  background: #50a6cd;
-}
 
-/*End background colours*/
+/* Class Selectors */
 
-.centre {
-  text-align: center;
-}
-.clear {
-  clear: both;
-}
-
-figure.fluid-images-3 img {     /*figure area containing 3 images side by side*/
-  float: left; /*Lets them stack*/
-  max-width: 30.33%; /*-3% due to padding-left %*/
-  padding-left: 4.5%; /*Would be 3% but the fact that the first one has no padding-left means we add 1.5% (half of the padding that would have been on the first image)*/
-}
-figure.fluid-images-3 img:first-child {
-  padding-left: 0;
-}
-
-.fluid-100 {
-  max-width: 100%;
-}
-.fluid-half {
-  max-width: 50%;
-}
-
-.inline {
-  display: inline;
-}
-.inline-block {
-  display: inline-block;
-}
-
-.left {
-  float: left;
-}
-
-.margin-1 {
-  margin: 1rem;
-}
-.margin-1-left {
-  margin-left: 1rem;
-}
-.margin-1-right {
-  margin-right: 1rem;
-}
-.margin-4 {
-  margin: 4rem;
-}
-.margin-centre {
-  margin: 0 auto;
-}
-
-.nomargin {
-  margin: 0;
-}
-.nopadding {
-  padding: 0;
-}
-
-.padding-1 {
-  padding: 1rem;
-}
-.padding-3 {
-  padding: 3rem;
-}
-.padding-3-left {
-  padding-left: 3rem;
-}
-.padding-3-right {
-  padding-right: 3rem;
-}
-
-.right {
-  float: right;
-}
-
-.small {
-  font-size: 1.5rem;
-}
-
-.spacer {  /* works with Skeleton to allow white space between vertically stacked divs */
-  float: left;
-  height: 3em;
-  width: 100%;
-}
-
-.vertical-top {
-  vertical-align: top;
-}
-
-/*YouTube embed responsive solution from https://coolestguidesontheplanet.com/videodrome/youtube/*/
-
-  .video-container {
-  	position:relative;
-  	padding-bottom:56.25%;
-  	padding-top:30px;
-  	height:0;
-  	overflow:hidden;
-  }
-  .video-container iframe, .video-container object, .video-container embed {
-  	position:absolute;
-  	top:0;
-  	left:0;
-  	width:100%;
-  	height:100%;
-  }
-
-.width-50 {
-  width: 50%;
-}
-
-.width-90 {
-  width: 90%;
-}

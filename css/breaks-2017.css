@@ -1,0 +1,127 @@
+/* Hashtags
+  #test - any test stuff that needs removing later
+  #weird - any weird stuff I don't understand but don't have time to look up/doesn't matter
+*/
+
+@media screen and (max-width: 1100px) { /*Desktop small*/
+
+  #content p {
+    width: 90%;               /* reduces extent of margins on paragraph text for smaller resolutions */
+  }
+  #content ul {
+    width: 90%;               /* matches p */
+  }
+
+
+  ul.body {
+    padding-left: 0.25em;          /* reduces padding as it causes ridiculous misalign */
+  }
+  ul.lesspadding {
+    padding-left: 0.5em;
+  }
+}
+
+@media screen and (max-width: 750px) { /*Tablet*/
+  body {
+    font-size: 1.4rem;
+  }
+
+  /* CSS for table mobile fix JavaScript, from: http://sitesforprofit.com/responsive-tables-in-wordpress */
+  table {width:100%;}
+  thead {display: none;}
+  /*tr:nth-of-type(2n) {background-color: inherit;} removed as it seems to make background disappear on final cell*/
+  tr td:first-child {background: #ffa123; font-weight:bold;font-size:1.3em;} /*change this to control the properties of the newly styled table cell that's added when the resize happens*/
+  tbody td {display: block;  text-align:center;}
+  tbody td:before {
+    content: attr(data-th);
+    display: block;
+    text-align:center;
+  }
+
+  #content {
+    margin-top: 150px; /*allows navigation to overlay content box, if it was all margin it would have a clear break behind the navigation which looks bad for this design*/
+    padding-top: 6em;
+  }
+
+  #top { /*centres it on tablet*/
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #top ul li {
+    font-size: 1.5rem;                                    /* fixes top logos etc so they don't interfere with design on lower resolutions; forces them to align centre-ish and out of the way of top graphics */
+    display: inline;
+  }
+  #top img {
+    width: 70px;
+  }
+
+  img.content-box-img-fullwidth { /*stops images from becoming HUGE*/
+    margin: 0 0 0 24%;
+    padding: 0;
+    width: 50%;
+  }
+  img.fluid {      /*Removes padding so can change image layout based on container which is safer with breakpoints, lets me alter an image's layout depending on circumstances, not global*/
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 500px) { /*Mobile phones*/
+
+  body {
+    font-size: 1.4rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2.2rem;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+
+  header {
+    height: 173px;                              /* Allows taglines to be snug under #header-title */
+  }
+
+  table {
+    font-size: 1.4rem;
+  }
+
+  #content {
+    margin-top: 20px;
+    padding-top: 15em; /* moves content out from underneath of navigation */
+  }
+
+  #footer {
+    font-size: 1.5rem;
+  }
+  #footer ul li {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  #tableBig {                                                  /* tables with more columns, needs smaller font */
+    font-size: 1.2rem;
+  }
+
+  #top {
+    visibility: hidden;
+    height: 0;
+  }
+
+  .left {
+    float: none;                                            /* just because floating doesn't work on mobile,
+                                                            same below */
+  }
+
+  .right {
+    float: none;
+  }
+}
