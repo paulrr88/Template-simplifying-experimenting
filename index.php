@@ -36,34 +36,37 @@
 </head>
 
 <body>
+    
+    <div class="container" style="background: purple;">
 
-  <header id="banner" role="banner"><!--Start of header area containing website title, graphics and navigation etc-->
-    <nav id="top" role="navigation"><!--Start of top information area-->
-      <ul>
-        <li><a href="sitemap/">Sitemap</a></li>
-        <li><a href="folder/">Another link</a></li>
-      </ul>
-    </nav><!--End of top information area-->
+      <header role="banner"><!--Start of header area containing website title, graphics and navigation etc-->
+        <nav role="navigation"><!--Start of top information area-->
+          <ul>
+            <li><a href="sitemap/">Sitemap</a></li>
+            <li><a href="folder/">Another link</a></li>
+          </ul>
+        </nav><!--End of top information area-->
 
-    <h1 class="centre">Website Title</h1>
+        <h1 class="centre">Website Title</h1>
 
-    <h2 class="centre">Website Byline</h2>
+        <h2 class="centre">Website Byline</h2>
 
-    <nav id="nav-main" role="navigation"><!--Main navigation start-->
-      <ul>
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3</li>
-        <li>Link 4</li>
-        <li>Link 5</li>
-        <li>Link 6</li>
-        <li>Link 7</li>
-        <li>Link 8</li>
-        <li>Link 9</li>
-        <li>Link 10</li>
-      </ul>
-    </nav><!--Main navigation ends-->
-  </header><!--Header area ends-->
+        <nav class="nav-main" role="navigation"><!--Main navigation start-->
+          <ul>
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+            <li>Link 4</li>
+            <li>Link 5</li>
+            <li>Link 6</li>
+            <li>Link 7</li>
+            <li>Link 8</li>
+            <li>Link 9</li>
+            <li>Link 10</li>
+          </ul>
+        </nav><!--Main navigation ends-->
+      </header><!--Header area ends-->
+
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -152,7 +155,6 @@
                 </a>
               
               <figcaption class="centre padding-3-left padding-3-right">Hey this is a caption for the above images plural. To add another image, just change it to fluid-xx depending on how many images (divided up into 100 or whatever width the figure container is). Obviously adjustments need to be made if padding and margins are needed. The above also have links! Weirdly this messes with the layout a bit and requires further tweaking beyond just when you have plain images.</figcaption>
-            </figure>
           </section>
 
           <div class="four columns" style="background: green">
@@ -176,58 +178,63 @@
       <p class="clear">End of container</p>
     </main>
 
-    <footer>
-    <ul>
-      <li><a href="">Home</a></li>
-      <li><a href="events/">Events</a></li>
-      <li><a href="diary/">Diary</a></li>
-      <li><a href="news/">News</a></li>
-      <li><a href="videos/">Videos</a></li>
-      <li><a href="admin/">Admin</a></li>
-      <li><a href="findus/">Find Us</a></li>
-    </ul>
-
-    <br />
-
-    <div role="contentinfo"><!--Copyright info etc-->
-      <p><strong>&copy; <?php echo date('Y'); ?> Arun Sunshine Group | Designed by <a href="http://www.paulcomputerhelp.co.uk/">Paul Robinson</a></strong><br />
-
-      <br />
-      <br />
-
-      <a href="perch/">Perch Login</a></p>
-    </div>
-
-    <br />
-    <br />
-    <br />
-  </footer>
-
-  <script>
-  // DELETE THIS IF NOT NEEDED ON THIS PAGE
-  // fix for mobile table layout from http://sitesforprofit.com/responsive-tables-in-wordpress
-
-  var headertext = [];
-  var headers = document.querySelectorAll("thead");
-  var tablebody = document.querySelectorAll("tbody");
-
-  for (var i = 0; i < headers.length; i++) {
-    headertext[i]=[];
-    for (var j = 0, headrow; headrow = headers[i].rows[0].cells[j]; j++) {
-      var current = headrow;
-      headertext[i].push(current.textContent);
-      }
-  }
-
-  for (var h = 0, tbody; tbody = tablebody[h]; h++) {
-    for (var i = 0, row; row = tbody.rows[i]; i++) {
-      for (var j = 0, col; col = row.cells[j]; j++) {
-        col.setAttribute("data-th", headertext[h][j]);
+  
+  </div><!--END OF CONTAINER-->
+  
+      <footer>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="events/">Events</a></li>
+            <li><a href="diary/">Diary</a></li>
+            <li><a href="news/">News</a></li>
+            <li><a href="videos/">Videos</a></li>
+            <li><a href="admin/">Admin</a></li>
+            <li><a href="findus/">Find Us</a></li>
+          </ul>
+  
+          <br />
+  
+          <div role="contentinfo"><!--Copyright info etc-->
+              <p><strong>&copy; <?php echo date('Y'); ?> Arun Sunshine Group | Designed by <a href="http://www.paulcomputerhelp.co.uk/">Paul Robinson</a></strong><br />
+  
+              <br />
+              <br />
+  
+              <a href="perch/">Perch Login</a></p>
+          </div>
+  
+          <br />
+          <br />
+          <br />
+      </footer>
+  
+      <script>
+    // DELETE THIS IF NOT NEEDED ON THIS PAGE
+    // fix for mobile table layout from http://sitesforprofit.com/responsive-tables-in-wordpress
+  
+    var headertext = [];
+    var headers = document.querySelectorAll("thead");
+    var tablebody = document.querySelectorAll("tbody");
+  
+    for (var i = 0; i < headers.length; i++) {
+      headertext[i]=[];
+      for (var j = 0, headrow; headrow = headers[i].rows[0].cells[j]; j++) {
+        var current = headrow;
+        headertext[i].push(current.textContent);
+        }
+    }
+  
+    for (var h = 0, tbody; tbody = tablebody[h]; h++) {
+      for (var i = 0, row; row = tbody.rows[i]; i++) {
+        for (var j = 0, col; col = row.cells[j]; j++) {
+          col.setAttribute("data-th", headertext[h][j]);
+        }
       }
     }
-  }
-</script>
-<!-- End Document
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
-</html>
+  </script>
+  
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </body>
+  </html>
+  

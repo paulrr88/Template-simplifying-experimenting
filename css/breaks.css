@@ -1,5 +1,16 @@
 /* Larger than mobile */
-@media (min-width: 400px) {}
+@media (min-width: 400px) {
+    .nav-main ul li {
+        display: inline-block;
+        *display: inline;                                       /* IE7 */
+            *zoom: 1;
+        font-size: 3rem;
+        padding-left: 3rem;
+    }
+    .nav-main ul li:last-child {
+        padding-right: 3rem;
+    }
+}
 
 /* Larger than phablet (also point when grid in Skeleton becomes active) */
 @media (min-width: 550px) {}

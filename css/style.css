@@ -91,7 +91,7 @@ main {
 }
 
 nav {
-    
+    background: #fff;
 }
 
 ol {
@@ -120,3 +120,44 @@ ul {
 .centre {
     text-align: center;
 }
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.nav-main ul {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+/*#nav-main {
+    
+}
+#nav-main a {
+    color: #ff7800;
+    text-decoration: none;
+}
+#nav-main a:hover {
+    color: #db6700;
+}
+#nav-main ul {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+#nav-main ul li {
+    color: #ffa726;
+    display: inline-block;
+    *display: inline;                                       /* IE7 */
+        /**zoom: 1;
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-size: 3rem;
+    padding-left: 3rem;
+}
+#nav-main ul li:last-child {
+    padding-right: 3rem;
+}*/
