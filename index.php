@@ -53,16 +53,16 @@
 
         <nav class="nav-main" role="navigation"><!--Main navigation start-->
           <ul>
-            <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
-            <li>Link 4</li>
-            <li>Link 5</li>
-            <li>Link 6</li>
-            <li>Link 7</li>
-            <li>Link 8</li>
-            <li>Link 9</li>
-            <li>Link 10</li>
+            <li><a href="">Link 1</a></li>
+            <li><a href="">Link 2</a></li>
+            <li><a href="">Link 3</a></li>
+            <li><a href="">Link 4</a></li>
+            <li><a href="">Link 5</a></li>
+            <li><a href="">Link 6</a></li>
+            <li><a href="">Link 7</a></li>
+            <li><a href="">Link 8</a></li>
+            <li><a href="">Link 9</a></li>
+            <li><a href="">Link 10</a></li>
           </ul>
         </nav><!--Main navigation ends-->
       </header><!--Header area ends-->
@@ -81,7 +81,29 @@
           <section style="background: yellow; color: black;">
             <h2>Header for section within article</h2>
 
-            <p>Content for section</p>
+            <p>Zarathustra value salvation pious self oneself society strong pious depths good. Abstract inexpedient suicide ocean pinnacle selfish merciful grandeur. Of ascetic revaluation philosophy faith marvelous strong christian zarathustra.</p>
+
+            <p>Convictions selfish disgust pinnacle strong. Passion grandeur hatred endless abstract moral spirit god justice merciful revaluation faithful.</p>
+
+            <p>Intentions burying enlightenment war suicide. Evil morality holiest morality war moral free marvelous mountains chaos. Ultimate transvaluation merciful passion victorious pious justice. Hope faith inexpedient mountains god hope madness. War disgust pinnacle right right overcome morality law sexuality ultimate noble passion marvelous. Grandeur reason endless grandeur decieve intentions reason. Passion right faith will horror free against overcome moral chaos pious free.</p>
+
+            <p>Contradict dead self salvation hatred deceptions grandeur hatred. Insofar abstract abstract fearful god suicide virtues against enlightenment love will. Hope transvaluation madness spirit deceptions faithful. Snare madness ascetic faith spirit gains mountains selfish against pious play morality ocean. Chaos enlightenment will depths free. Enlightenment.</p>
+              
+            <ul role="list">
+              <li role="listitem">Hey there. <code>This is a code snippet</code>
+                <ul role="list">
+                  <li role="listitem">Hey I'm embedded</li>
+                </ul>
+              </li>
+            </ul>
+              
+            <ol role="list">
+              <li role="listitem">Hey there. <code>This is a code snippet</code>
+                <ol role="list">
+                  <li role="listitem">Hey I'm embedded</li>
+                </ol>
+              </li>
+            </ol>
 
             <h3>Header 3</h3>
 
@@ -90,14 +112,6 @@
             <h5>Header 5</h5>
 
             <h6>Header 6</h6>
-
-            <ul role="list">
-              <li role="listitem">Hey there. <code>This is a code snippet</code>
-                <ul role="list">
-                  <li role="listitem">Hey I'm embedded</li>
-                </ul>
-              </li>
-            </ul>
 
             <table summary="">
               <thead>

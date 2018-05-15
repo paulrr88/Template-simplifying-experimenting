@@ -1,12 +1,4 @@
-/*
-#delete any bits marked with #delete later when cleaning up
-*/
-
-/* for example here would have like 
-a { text-decoration: none
-this or that etc; } 
-
-KEEP THIS GLOBAL and also largely reset so no padding, margins etc. And just for mobile #delete */
+/*N.B. THIS IS MOBILE FIRST so all selectors etc in this should be mobile-friendly, anything else is in breaks.css*/
 
 /* Element Selectors */
 
@@ -81,6 +73,15 @@ header {
     
 }
 
+#footer {
+    font-size: 1.5rem;
+}
+#footer ul li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
 img {
     margin: 0;
     padding: 0;
@@ -98,20 +99,64 @@ ol {
     
 }
 
+/*Padding on bottom has to be reduced to prevent over-padding between paragraphs. last-child and last-of-type combined take care of all cases where you'll want it to have a full bottom padding (at the end of a series of paragraphs for instance).*/
+
 p {
-    
+  margin: 0;
+  padding: 1.5rem 1.5rem 0.25rem 1.5rem;
+}
+p:last-child {
+    padding-bottom: 1.5rem;
+}
+p:last-of-type {
+    padding-bottom: 1.5rem;
 }
 
+/* CSS for table mobile fix JavaScript, from: http://sitesforprofit.com/responsive-tables-in-wordpress */
+
 table {
-    
+    width:100%;
+}
+thead {
+    display: none;
+}
+/*tr:nth-of-type(2n) {background-color: inherit;} removed as it seems to make background disappear on final cell*/
+tr td:first-child {
+    background: #ffa123; 
+    font-weight:bold;
+    font-size:1.3em;
+} /*change this to control the properties of the newly styled table cell that's added when the resize happens*/
+tbody td {
+    display: block;  
+    text-align:center;
+}
+tbody td:before {
+    content: attr(data-th);
+    display: block;
+    text-align:center;
+}
+
+ol {
+    margin: 0;
+    padding: 0 0 0 5rem;
 }
 
 ul {
-    
+    margin: 0;
+    padding: 0 0 0 5rem;
 }
 
 
+
+
+
 /* ID Selectors */
+
+
+
+
+
+
 
 
 
