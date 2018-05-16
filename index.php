@@ -114,18 +114,23 @@
             <h6>Header 6</h6>
 
             <table summary="">
-              <thead>
-                <tr>
-                  <th scope="col">Hey it's table time</td>
-                  <th scope="col">I'm the second column header</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>I'm the first cell in the table body gosh I have a lot of text</td>
-                  <td>I'm the second</td>
-                </tr>
-              </tbody>
+                <thead>
+                    <tr>
+                        <th scope="col">I'm the first column header in the table</td>
+                        <th scope="col">I'm the second column header</td>
+                        <th scope="row">I'm the first row header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>I'm the first column cell gosh I have a lot of text</td>
+                        <td>I'm the second column cell</td>
+                        <td>Moo</td>
+                    </tr>
+                    <tr>
+                        <td>I'm in the second row in the first column</td>
+                    </tr>
+                </tbody>
             </table>
 
             <figure class="width-50">
@@ -195,15 +200,15 @@
   
   </div><!--END OF CONTAINER-->
   
-      <footer>
-          <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="events/">Events</a></li>
-            <li><a href="diary/">Diary</a></li>
-            <li><a href="news/">News</a></li>
-            <li><a href="videos/">Videos</a></li>
-            <li><a href="admin/">Admin</a></li>
-            <li><a href="findus/">Find Us</a></li>
+      <footer style="background: orange;">
+          <ul style="background: green;">
+            <li style="background: yellow;"><a href="">Home</a></li>
+            <li style="background: yellow;"><a href="events/">Events</a></li>
+            <li style="background: yellow;"><a href="diary/">Diary</a></li>
+            <li style="background: yellow;"><a href="news/">News</a></li>
+            <li style="background: yellow;"><a href="videos/">Videos</a></li>
+            <li style="background: yellow;"><a href="admin/">Admin</a></li>
+            <li style="background: yellow;"><a href="findus/">Find Us</a></li>
           </ul>
   
           <br />

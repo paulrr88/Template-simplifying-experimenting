@@ -1,5 +1,27 @@
 /* Larger than mobile */
 @media (min-width: 400px) {
+    footer {
+        font-size: 1.6rem;
+        line-height: 200%; /*Adds much needed height to links especially when it goes into two lines as it will on some sites*/
+    }
+    footer ul {
+        padding: 2rem 0 0 0; /*Adds a gap above the list so it's not stuck to the bottom of the content above it*/
+    }
+    footer ul li {
+        border-right: 0.3rem solid #000;
+        display: inline-block;
+        margin: 0;
+        padding: 0 1rem 0 0.7rem;
+    }
+    /*Prevents unnecessary/problematic padding and borders on first and last elements in the list*/
+    footer ul li:first-child {
+        padding-left: 0;
+    }
+    footer ul li:last-child {
+        border-right: 0;
+        padding-right: 0;
+    }
+    
     .nav-main ul li {
         display: inline-block;
         *display: inline;                                       /* IE7 */
@@ -8,45 +30,34 @@
         padding-left: 3rem;
     }
     .nav-main ul li:last-child {
-        padding-right: 3rem;
+        padding-right: 3rem; /*Counterbalances the padding-left so last element in list isn't hugging right side of page - actually pushes whole list 3rem to the left*/
     }
 }
 
 /* Larger than phablet (also point when grid in Skeleton becomes active) */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+    table {
+        width:100%;
+    }
+    thead {
+        display: block; /*Removes hidden status for table headers*/
+    }
+    tbody td {
+        display: block; 
+        text-align: left;
+    }
+    tbody td::before { /*Disabling JavaScript stuff and changing formatting to normal table style*/
+        content: none; /*Disables the JavaScript content generation used in the mobile-friendly layout*/
+        display: block;
+        font-size: 1.75rem;
+        font-weight: bold;
+        text-align: center;
+    }
+}
 
 /* Larger than tablet */
 @media (min-width: 750px) {
-    footer {
-        font-size: 1.6rem;
-        line-height: 200%; /*Adds much needed height to links especially when it goes into two lines as it will on some sites*/
-        margin: 0 auto;
-        text-align: center;
-        width: 80%;
-    }
-    footer a:link {
-        color: #004f5c;
-    }
-    footer a:visited {
-        color: #004f5c;
-    }
-    footer ul {
-        margin: 0;
-        padding: 2rem 0 0 0;
-    }
-    footer ul li {
-        border-right: 0.3rem solid #000;
-        display: inline-block;
-        margin: 0;
-        padding: 0 1rem 0 0.7rem;
-    }
-    footer ul li:first-child {
-        padding-left: 0;
-    }
-    footer ul li:last-child {
-        border-right: 0;
-        padding-right: 0;
-    }
+    
 }
 
 /* Larger than desktop */
