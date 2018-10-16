@@ -10,7 +10,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>Home &mdash; Organisation Title</title>
-  <meta name="description" content="We meet at Dove Lodge, 49 Beach road, Littlehampton on alternate Sundays from 2pm to 5pm. Our objective is to advance the education and welfare of adults with learning difficulties, and to provide support for their families and carers, in order to provide a better standard of life for such people.">
+  <meta name="description" content="">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -115,20 +115,18 @@
 
             <table summary="">
                 <thead>
-                    <tr>
-                        <th scope="col">I'm the first column header in the table</td>
-                        <th scope="col">I'm the second column header</td>
-                        <th scope="row">I'm the first row header</th>
-                    </tr>
+                    <th scope="col" style="background: orange;">I'm the first column header in the table</th>
+                    <th scope="col" style="background: green;">I'm the second column header</th>
+                    <th scope="col" style="background: purple;">I'm the third column header</th>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>I'm the first column cell gosh I have a lot of text</td>
-                        <td>I'm the second column cell</td>
-                        <td>Moo</td>
+                        <td style="background: orange;">I'm the first column cell gosh I have a lot of text</td>
+                        <td style="background: green;">I'm the second column cell</td>
+                        <td style="background: purple;">Moo</td>
                     </tr>
                     <tr>
-                        <td>I'm in the second row in the first column</td>
+                        <td style="background: pink;">I'm in the second row in the first column</td>
                     </tr>
                 </tbody>
             </table>
@@ -227,30 +225,7 @@
           <br />
       </footer>
   
-      <script>
-    // DELETE THIS IF NOT NEEDED ON THIS PAGE
-    // fix for mobile table layout from http://sitesforprofit.com/responsive-tables-in-wordpress
-  
-    var headertext = [];
-    var headers = document.querySelectorAll("thead");
-    var tablebody = document.querySelectorAll("tbody");
-  
-    for (var i = 0; i < headers.length; i++) {
-      headertext[i]=[];
-      for (var j = 0, headrow; headrow = headers[i].rows[0].cells[j]; j++) {
-        var current = headrow;
-        headertext[i].push(current.textContent);
-        }
-    }
-  
-    for (var h = 0, tbody; tbody = tablebody[h]; h++) {
-      for (var i = 0, row; row = tbody.rows[i]; i++) {
-        for (var j = 0, col; col = row.cells[j]; j++) {
-          col.setAttribute("data-th", headertext[h][j]);
-        }
-      }
-    }
-  </script>
+      
   
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

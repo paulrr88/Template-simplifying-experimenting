@@ -37,19 +37,21 @@
 /* Larger than phablet (also point when grid in Skeleton becomes active) */
 @media (min-width: 550px) {
     table {
-        width:100%;
+        display: table;
+        margin: 0 auto;
+        width:80%;
     }
     thead {
-        display: block; /*Removes hidden status for table headers*/
+        display: table; /*Removes hidden status for table headers*/
     }
     tbody td {
-        display: block; 
-        text-align: left;
+        display: inline; 
+        text-align: center;
     }
     tbody td::before { /*Disabling JavaScript stuff and changing formatting to normal table style*/
         content: none; /*Disables the JavaScript content generation used in the mobile-friendly layout*/
-        display: block;
-        font-size: 1.75rem;
+        display: table; /*Returns all cells to table alignment, without this they stay in one column*/
+        font-size: 1.5rem;
         font-weight: bold;
         text-align: center;
     }
