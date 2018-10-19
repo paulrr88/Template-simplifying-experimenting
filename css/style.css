@@ -2,7 +2,6 @@
 
 /* Element Selectors */
 
-
 a {
     color: #0082ba;
     margin: 0;
@@ -107,10 +106,6 @@ nav {
     background: #fff;
 }
 
-ol {
-    
-}
-
 /*Padding on bottom has to be reduced to prevent over-padding between paragraphs. last-child and last-of-type combined take care of all cases where you'll want it to have a full bottom padding (at the end of a series of paragraphs for instance).*/
 
 p {
@@ -131,6 +126,9 @@ table {
 }
 thead {
     display: none;
+}
+thead th {
+    text-align: center;
 }
 tbody td {
     display: block;  
@@ -171,13 +169,136 @@ ul {
 
 /* Class Selectors */
 
+.block {
+    display: block;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.inline {
+    display: inline;
+}
+.inline-block {
+    display: inline-block;
+}
+
 .centre {
     text-align: center;
+}
+.clear {
+    clear: both;
 }
 
 .container {
     margin: 0 auto;
     width: 100%;
+}
+
+.fluid-images-3 img {     /*figure area containing 3 images side by side*/
+    max-width: 100%; /*gets images to stack on mobile instead of be inline with each-other*/
+    padding-left: 0; /*removes padding not needed for mobile*/
+}
+
+.fluid-100 {
+    max-width: 100%;
+}
+.fluid-half {
+    max-width: 50%;
+}
+
+.left {
+    float: none;                                            /* just because floating doesn't work on mobile,
+                                                            same below */
+}
+.right {
+    float: none;
+}
+
+.margin-1 {
+    margin: 1rem;
+}
+.margin-1-left {
+    margin-left: 1rem;
+}
+.margin-1-right {
+    margin-right: 1rem;
+}
+.margin-1-top {
+    margin-top: 1rem;
+}
+.margin-2 {
+    margin: 2rem;
+}
+.margin-2-left {
+    margin-left: 2rem;
+}
+.margin-2-top {
+    margin-top: 2rem;
+}
+.margin-3-left {
+    margin-left: 3rem;
+}
+.margin-4-top {
+    margin-top: 4rem;
+}
+.margin-6-top {
+    margin-top: 6rem;
+}
+.margin-10-top {
+    margin-top: 10rem;
+}
+.margin-4 {
+    margin: 4rem;
+}
+.margin-centre {
+    margin: 0 auto;
+}
+.margin-none {
+    margin: 0;
+}
+.margin-none p {
+    margin: 0; /*Added p to this so if a paragraph, which I can't edit, is created by Perch, and is within a parent with these as a class, it removes margin and padding from that p child element*/
+}
+
+.padding-1-body { /*Respects 1.5rem left padding on paragraph text so everything aligns properly*/
+    padding: 1rem 1rem 1rem 1.5rem;
+}
+.padding-1 {
+  padding: 1rem;
+}
+.padding-2 {
+  padding: 2rem;
+}
+.padding-3 {
+  padding: 3rem;
+}
+.padding-3-left {
+  padding-left: 3rem;
+}
+.padding-3-right {
+  padding-right: 3rem;
+}
+.padding-4 {
+  padding: 4rem;
+}
+.padding-4-left {
+  padding-left: 4rem;
+}
+.padding-4-right {
+  padding-right: 4rem;
+}
+.padding-none {
+    padding: 0;
+}
+.padding-none p {
+    padding: 0; /*Added p to this so if a paragraph, which I can't edit, is created by Perch, and is within a parent with these as a class, it removes margin and padding from that p child element*/
 }
 
 .nav-main ul {
@@ -186,6 +307,35 @@ ul {
     margin: 0 auto;
     text-align: center;
     width: 100%;
+}
+
+.nav-top ul li {
+    display: block;
+    *display: block;                                       /* IE7 */
+    padding-left: 0;
+}
+.nav-top ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.spacer {  /* works with Skeleton to allow white space between vertically stacked divs */
+    float: left;
+    height: 3em;
+    width: 100%;
+}
+
+.wordbreak { /*Useful for table cells in particular sometimes if I need them to be more fluid with how they display text*/
+    word-wrap: break-word;
+}
+
+.wrap-text { /*Used to force an area to preserve white space, i.e. respect single line breaks*/
+    white-space: pre-wrap;
+}
+
+.vertical-top {
+    vertical-align: top;
 }
 
 /*#nav-main {

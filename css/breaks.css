@@ -22,6 +22,37 @@
         padding-right: 0;
     }
     
+    .fluid-images-3 img {     /*figure area containing 3 images side by side*/
+        float: left; /*Lets them stack but breaks when a link is added*/
+        max-width: 30.33%; /*-3% due to padding-left %*/
+        padding-left: 4.5%; /*Would be 3% but the fact that the first one has no padding-left means we add 1.5% (half of the padding that would have been on the first image)*/
+    }
+    
+    .left {
+        float: left;                                            /* restores floating for higher resolutions, same below */
+    }
+    .right {
+        float: right;
+    }
+
+    .nav-top ul {
+        padding: 1rem;
+        text-align: left;
+    }
+    .nav-top ul li {
+        display: inline-block;
+        *display: inline;                                       /* IE7 */
+            *zoom: 1;
+        font-size: 1.5rem;
+        padding-left: 3rem;
+    }
+    .nav-top ul li:first-child {
+        padding-left: 0; /*Removes for first bullet so it aligns nicely at top of page*/
+    }
+    .nav-top ul li:last-child {
+        padding-right: 3rem; /*Counterbalances the padding-left so last element in list isn't hugging right side of page - actually pushes whole list 3rem to the left*/
+    }
+    
     .nav-main ul li {
         display: inline-block;
         *display: inline;                                       /* IE7 */
@@ -32,21 +63,56 @@
     .nav-main ul li:last-child {
         padding-right: 3rem; /*Counterbalances the padding-left so last element in list isn't hugging right side of page - actually pushes whole list 3rem to the left*/
     }
+    
+    .small {
+        font-size: 1.5rem;
+    }
+    
+    /*YouTube embed responsive solution from https://coolestguidesontheplanet.com/videodrome/youtube/*/
+
+    .video-container {
+        position:relative;
+        padding-bottom:56.25%;
+        padding-top:30px;
+        height:0;
+        overflow:hidden;
+    }
+    .video-container iframe, .video-container object, .video-container embed {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+    }
 }
 
 /* Larger than phablet (also point when grid in Skeleton becomes active) */
 @media (min-width: 550px) {
+    header {
+        background: url(../img/bg-banner.jpg) 0% 0%/100%;
+    }
+    
+    ol {
+        margin: 1.5rem auto;
+        width: 60%;
+    }
+    ol li {
+        padding: 0.5rem 0;
+    }
+    
     table {
-        display: table;
         margin: 0 auto;
         width:80%;
     }
     thead {
-        display: table; /*Removes hidden status for table headers*/
+        display: table-header-group; /*Removes hidden status for table headers*/
+    }
+    thead th {
+        padding: 2%;
     }
     tbody td {
-        display: inline; 
-        text-align: center;
+        display: table-cell; /*Re-aligns table cells so they'll sit under their headers!*/
+        padding: 2%;
     }
     tbody td::before { /*Disabling JavaScript stuff and changing formatting to normal table style*/
         content: none; /*Disables the JavaScript content generation used in the mobile-friendly layout*/
@@ -54,6 +120,59 @@
         font-size: 1.5rem;
         font-weight: bold;
         text-align: center;
+    }
+    
+    .textbig7 {
+        font-size: 7rem;
+    }
+    .textbig8 {
+        font-size: 8rem;
+    }
+    .textbig9 {
+        font-size: 9rem;
+    }
+    .textmid1.75 {
+        font-size: 1.75rem;
+    }
+    .textmid2 {
+        font-size: 2rem;
+    }
+    .textshadow-mid {
+        text-shadow: 4px 4px 8px #333;
+    }
+    .textshadow-soft {
+        text-shadow: 4px 4px 12px #666;
+    }
+    .textshadow-strong {
+        text-shadow: 4px 4px 9px #000;
+    }
+    
+    .list-contents { /*Centred list of links for pages with subpages that I want to list*/
+        background: #fff;
+        border-top: 5px solid #ffa726;
+        box-shadow: 20px 15px 40px #444;
+        font-size: 2.5rem;
+        list-style: none;
+        margin: 2rem;
+        padding: 1.5rem 0 1.5rem 0;
+        text-align: center;
+    }
+    .list-contents li {
+        display: inline-block;
+        margin: 0;
+        padding: 0 2rem 0 0;
+    }
+    
+    .width-50 {
+        width: 50%;
+    }
+    
+    .width-80 {
+        width: 80%;
+    }
+
+    .width-90 {
+        width: 90%;
     }
 }
 

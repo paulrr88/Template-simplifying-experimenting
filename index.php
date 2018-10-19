@@ -40,7 +40,7 @@
     <div class="container" style="background: purple;">
 
       <header role="banner"><!--Start of header area containing website title, graphics and navigation etc-->
-        <nav role="navigation"><!--Start of top information area-->
+        <nav role="navigation" class="nav-top"><!--Start of top information area-->
           <ul>
             <li><a href="sitemap/">Sitemap</a></li>
             <li><a href="folder/">Another link</a></li>
@@ -114,18 +114,18 @@
             <h6>Header 6</h6>
 
             <table summary="">
-                <thead>
+                <thead style="background: brown;">
                     <th scope="col" style="background: orange;">I'm the first column header in the table</th>
                     <th scope="col" style="background: green;">I'm the second column header</th>
                     <th scope="col" style="background: purple;">I'm the third column header</th>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr style="background: red;">
                         <td style="background: orange;">I'm the first column cell gosh I have a lot of text</td>
                         <td style="background: green;">I'm the second column cell</td>
                         <td style="background: purple;">Moo</td>
                     </tr>
-                    <tr>
+                    <tr style="background: brown;">
                         <td style="background: pink;">I'm in the second row in the first column</td>
                     </tr>
                 </tbody>
@@ -141,8 +141,23 @@
               >
               <figcaption>Hey this is a caption for the above image</figcaption>
             </figure>
+          </section>
 
-            <figure class="fluid-images-3 margin-4" style="background: magenta;">
+          <div class="four columns" style="background: green">
+            <p>Four columns</p>
+          </div>
+
+          <div class="three columns" style="background: green">
+            <p>Three columns</p>
+          </div>
+
+          <div class="four columns u-pull-right">
+            <section style="background: purple;">
+              <p>This area doesn't want to be part of the main article area! Behold u-pull-right.</p>
+            </section>
+          </div>
+            
+            <figure class="clear fluid-images-3 margin-4" style="background: magenta;">
                 <a href="">
                     <img
                     alt="Photo of a bunny"
@@ -171,24 +186,7 @@
                     >
                 </a>
               
-              <figcaption class="centre padding-3-left padding-3-right">Hey this is a caption for the above images plural. To add another image, just change it to fluid-xx depending on how many images (divided up into 100 or whatever width the figure container is). Obviously adjustments need to be made if padding and margins are needed. The above also have links! Weirdly this messes with the layout a bit and requires further tweaking beyond just when you have plain images.</figcaption>
-          </section>
-
-          <div class="four columns" style="background: green">
-            <p>Four columns</p>
-          </div>
-
-          <div class="three columns" style="background: green">
-            <p>Three columns</p>
-
-
-          </div>
-
-          <div class="four columns u-pull-right">
-            <section style="background: purple;">
-              <p>This area doesn't want to be part of the main article area! Behold u-pull-right.</p>
-            </section>
-          </div>
+              <figcaption class="clear centre padding-3-left padding-3-right">Hey this is a caption for the above images plural. To add another image, just change it to fluid-xx depending on how many images (divided up into 100 or whatever width the figure container is). Obviously adjustments need to be made if padding and margins are needed. The above also have links! Weirdly this messes with the layout a bit and requires further tweaking beyond just when you have plain images.</figcaption>
         </article>
       </div>
 
@@ -225,7 +223,30 @@
           <br />
       </footer>
   
-      
+      <script>
+    // DELETE THIS IF NOT NEEDED ON THIS PAGE
+    // fix for mobile table layout from http://sitesforprofit.com/responsive-tables-in-wordpress
+  
+    var headertext = [];
+    var headers = document.querySelectorAll("thead");
+    var tablebody = document.querySelectorAll("tbody");
+  
+    for (var i = 0; i < headers.length; i++) {
+      headertext[i]=[];
+      for (var j = 0, headrow; headrow = headers[i].rows[0].cells[j]; j++) {
+        var current = headrow;
+        headertext[i].push(current.textContent);
+        }
+    }
+  
+    for (var h = 0, tbody; tbody = tablebody[h]; h++) {
+      for (var i = 0, row; row = tbody.rows[i]; i++) {
+        for (var j = 0, col; col = row.cells[j]; j++) {
+          col.setAttribute("data-th", headertext[h][j]);
+        }
+      }
+    }
+  </script>
   
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
